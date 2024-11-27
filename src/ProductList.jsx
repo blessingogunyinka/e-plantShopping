@@ -261,7 +261,8 @@ function ProductList() {
     };
 
     const handleAddToCart = (product) => {
-        if (!addedToCart.find(item => item.name === product.name)) {
+        // if (!addedToCart.find(item => item.name === product.name)) {
+        if (!cartItems.find(item => item.name === product.name)) {
             dispatch(addItem(product)) ; 
     
             setAddedToCart(prev => [
